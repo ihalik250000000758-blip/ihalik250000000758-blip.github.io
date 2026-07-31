@@ -37,13 +37,14 @@ body {
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
-  color: #C8102E;
-  text-shadow: 2px 2px 0 #0B3C5D;
+  color: #0B3C5D;
+  text-shadow: 2px 2px 0 #ffcc00;
   letter-spacing: 1px;
+  transition: 0.2s ease;
 }
 
 .logo:hover {
-  color: #000000;
+  color: #C8102E;
   text-shadow: 2px 2px 0 #ffcc00;
 }
 
@@ -64,7 +65,7 @@ body {
 }
 
 .navbar a:hover {
-  color: #000000;
+  color: #C8102E;
   border-bottom-color: #C8102E;
   transform: scale(1.05);
 }
