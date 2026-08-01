@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -70,15 +74,19 @@ body {
   transform: scale(1.05);
 }
 
-/* ---------- MAIN: centering & alignment fix ---------- */
+/* ---------- MAIN: layout container for stacked sections ---------- */
+/* NOTE: main previously used display:flex + align-items/justify-content:center
+   with a single child (the Home section). With About and Contact sections now
+   added as siblings, main is switched to a column flex container so sections
+   stack vertically down the page. The .home rule itself (and everything inside
+   .home-content) is untouched below. */
 main {
   flex: 1;
   padding-top: 120px;
   padding-bottom: 40px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 80vh;
   width: 100%;
 }
 
@@ -156,6 +164,177 @@ main {
   box-shadow: 0 0px 0 #1f2a3a;
 }
 
+/* ---------- ABOUT & CONTACT: shared section wrapper ---------- */
+.about,
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.about-content,
+.contact-content {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+  background: rgba(255, 255, 240, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 48px 16px 48px 16px;
+  padding: 48px 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 4px #ffdd77, 0 0 0 8px #0B3C5D;
+  border: 2px solid #fff8e0;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.about-content:hover,
+.contact-content:hover {
+  transform: scale(1.01);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);
+}
+
+.about-content h1,
+.contact-content h1 {
+  font-size: 28px;
+  color: #0B3C5D;
+  text-shadow: 3px 3px 0 #ffcc00;
+  margin-bottom: 28px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  word-break: break-word;
+}
+
+/* ---------- ABOUT: info cards for Skills / Projects / Achievements ---------- */
+.info-card {
+  background: rgba(255, 255, 200, 0.3);
+  backdrop-filter: blur(2px);
+  border-left: 6px solid #C8102E;
+  border-right: 6px solid #C8102E;
+  border-radius: 24px;
+  padding: 24px 20px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.info-card:last-child {
+  margin-bottom: 0;
+}
+
+.info-card h2 {
+  font-size: 16px;
+  color: #C8102E;
+  text-shadow: 2px 2px 0 #ffcc00;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.skill-group {
+  margin-bottom: 20px;
+}
+
+.skill-group:last-child {
+  margin-bottom: 0;
+}
+
+.info-card h3,
+.project h3 {
+  font-size: 13px;
+  color: #0B3C5D;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.info-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-card li {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #1e2f3f;
+  font-weight: 300;
+  padding-left: 22px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.info-card li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #C8102E;
+}
+
+.info-card li:last-child {
+  margin-bottom: 0;
+}
+
+.project {
+  margin-top: 4px;
+}
+
+.note {
+  font-size: 11px;
+  color: #1e2f3f;
+  font-style: normal;
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+.info-card p.note {
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* ---------- CONTACT ---------- */
+.contact-content p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #1e2f3f;
+  background: rgba(255, 255, 200, 0.3);
+  padding: 16px 20px;
+  border-radius: 30px;
+  backdrop-filter: blur(2px);
+  margin-bottom: 36px;
+  border-left: 6px solid #C8102E;
+  border-right: 6px solid #C8102E;
+  font-weight: 300;
+}
+
+.contact-content a {
+  display: inline-block;
+  background: #0B3C5D;
+  color: #ffdd77;
+  font-size: 14px;
+  padding: 12px 24px;
+  margin: 8px 10px;
+  border-radius: 60px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #C8102E;
+  box-shadow: 0 6px 0 #1f2a3a;
+  transition: 0.08s linear;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.contact-content a:hover {
+  background: #C8102E;
+  color: #fff8e0;
+  border-color: #0B3C5D;
+  box-shadow: 0 4px 0 #1f2a3a;
+  transform: translateY(2px);
+}
+
+.contact-content a:active {
+  transform: translateY(6px);
+  box-shadow: 0 0px 0 #1f2a3a;
+}
+
 /* ---------- FOOTER (fixed to bottom, centered) ---------- */
 footer {
   background: rgba(11, 60, 93, 0.8);
@@ -213,7 +392,40 @@ footer p {
   }
   main {
     padding-top: 150px;
-    min-height: 70vh;
+  }
+  .about-content,
+  .contact-content {
+    padding: 30px 20px;
+    margin: 0 10px;
+  }
+  .about-content h1,
+  .contact-content h1 {
+    font-size: 20px;
+  }
+  .info-card {
+    padding: 18px 16px;
+  }
+  .info-card h2 {
+    font-size: 14px;
+  }
+  .info-card h3,
+  .project h3 {
+    font-size: 11px;
+  }
+  .info-card li {
+    font-size: 11px;
+  }
+  .note {
+    font-size: 10px;
+  }
+  .contact-content p {
+    font-size: 12px;
+    padding: 12px 14px;
+  }
+  .contact-content a {
+    font-size: 11px;
+    padding: 10px 16px;
+    margin: 6px 6px;
   }
 }
 
@@ -222,6 +434,15 @@ footer p {
     font-size: 16px;
   }
   .home-content a {
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+  }
+  .about-content h1,
+  .contact-content h1 {
+    font-size: 16px;
+  }
+  .contact-content a {
     display: block;
     margin: 10px auto;
     width: fit-content;
