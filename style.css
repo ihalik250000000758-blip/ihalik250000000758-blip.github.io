@@ -1,13 +1,20 @@
+/* ==========================================
+   GLOBAL & RESET STYLES
+   ========================================== */
+
+/* Enable smooth scrolling across the entire page */
 html {
   scroll-behavior: smooth;
 }
 
+/* Reset margins, paddings, and set standard box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Page body styling: Retro font, warm SVG background, and full-height flex layout */
 body {
   font-family: 'Press Start 2P', monospace;
   background-color: #ffaa00;
@@ -19,7 +26,12 @@ body {
   flex-direction: column;
 }
 
-/* ---------- HEADER (fixed, with glassmorphism) ---------- */
+
+/* ==========================================
+   HEADER & NAVIGATION (Fixed Glassmorphism)
+   ========================================== */
+
+/* Fixed header bar at top with blur effect */
 .header {
   position: fixed;
   top: 0;
@@ -37,6 +49,7 @@ body {
   flex-wrap: wrap;
 }
 
+/* Header brand logo */
 .logo {
   font-size: 24px;
   font-weight: bold;
@@ -47,16 +60,19 @@ body {
   transition: 0.2s ease;
 }
 
+/* Logo hover effect */
 .logo:hover {
   color: #C8102E;
   text-shadow: 2px 2px 0 #ffcc00;
 }
 
+/* Navigation links container */
 .navbar {
   display: flex;
   gap: 28px;
 }
 
+/* Individual navigation link */
 .navbar a {
   font-size: 16px;
   text-decoration: none;
@@ -68,18 +84,19 @@ body {
   transition: 0.2s ease;
 }
 
+/* Nav link hover state */
 .navbar a:hover {
   color: #C8102E;
   border-bottom-color: #C8102E;
   transform: scale(1.05);
 }
 
-/* ---------- MAIN: layout container for stacked sections ---------- */
-/* NOTE: main previously used display:flex + align-items/justify-content:center
-   with a single child (the Home section). With About and Contact sections now
-   added as siblings, main is switched to a column flex container so sections
-   stack vertically down the page. The .home rule itself (and everything inside
-   .home-content) is untouched below. */
+
+/* ==========================================
+   MAIN LAYOUT & HOME SECTION
+   ========================================== */
+
+/* Main content wrapper (stacks sections vertically below header) */
 main {
   flex: 1;
   padding-top: 120px;
@@ -90,6 +107,7 @@ main {
   width: 100%;
 }
 
+/* Hero/Home section card container */
 .home {
   max-width: 900px;
   width: 90%;
@@ -105,11 +123,13 @@ main {
   text-align: center;
 }
 
+/* Hover effect for home card */
 .home:hover {
   transform: scale(1.01);
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);
 }
 
+/* Main title inside home section */
 .home-content h1 {
   font-size: 28px;
   color: #0B3C5D;
@@ -120,6 +140,7 @@ main {
   word-break: break-word;
 }
 
+/* Paragraph text inside home section */
 .home-content p {
   font-size: 14px;
   line-height: 1.8;
@@ -134,6 +155,7 @@ main {
   font-weight: 300;
 }
 
+/* Call-to-action buttons in home section */
 .home-content a {
   display: inline-block;
   background: #0B3C5D;
@@ -151,6 +173,7 @@ main {
   letter-spacing: 1.5px;
 }
 
+/* Home button hover state */
 .home-content a:hover {
   background: #C8102E;
   color: #fff8e0;
@@ -159,12 +182,18 @@ main {
   transform: translateY(2px);
 }
 
+/* Home button active/click state */
 .home-content a:active {
   transform: translateY(6px);
   box-shadow: 0 0px 0 #1f2a3a;
 }
 
-/* ---------- ABOUT & CONTACT: shared section wrapper ---------- */
+
+/* ==========================================
+   ABOUT & CONTACT SECTIONS
+   ========================================== */
+
+/* Outer wrappers for About and Contact sections */
 .about,
 .contact {
   width: 100%;
@@ -173,6 +202,7 @@ main {
   padding: 40px 0;
 }
 
+/* Card containers for About and Contact content */
 .about-content,
 .contact-content {
   max-width: 900px;
@@ -189,12 +219,14 @@ main {
   text-align: center;
 }
 
+/* Hover effects for About and Contact cards */
 .about-content:hover,
 .contact-content:hover {
   transform: scale(1.01);
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);
 }
 
+/* Main headings for About and Contact cards */
 .about-content h1,
 .contact-content h1 {
   font-size: 28px;
@@ -206,7 +238,12 @@ main {
   word-break: break-word;
 }
 
-/* ---------- ABOUT: info cards for Skills / Projects / Achievements ---------- */
+
+/* ==========================================
+   ABOUT SECTION COMPONENTS (Cards, Lists, Notes)
+   ========================================== */
+
+/* Sub-cards inside the About section */
 .info-card {
   background: rgba(255, 255, 200, 0.3);
   backdrop-filter: blur(2px);
@@ -218,10 +255,12 @@ main {
   text-align: left;
 }
 
+/* Remove bottom margin on the last info card */
 .info-card:last-child {
   margin-bottom: 0;
 }
 
+/* Info card main heading */
 .info-card h2 {
   font-size: 16px;
   color: #C8102E;
@@ -231,14 +270,17 @@ main {
   text-align: center;
 }
 
+/* Container group for skills */
 .skill-group {
   margin-bottom: 20px;
 }
 
+/* Remove margin on the last skill group */
 .skill-group:last-child {
   margin-bottom: 0;
 }
 
+/* Sub-headings inside info cards and project blocks */
 .info-card h3,
 .project h3 {
   font-size: 13px;
@@ -247,11 +289,13 @@ main {
   letter-spacing: 0.5px;
 }
 
+/* Unordered list styling within info cards */
 .info-card ul {
   list-style: none;
   padding-left: 0;
 }
 
+/* List items inside info cards */
 .info-card li {
   font-size: 12px;
   line-height: 1.9;
@@ -262,6 +306,7 @@ main {
   margin-bottom: 10px;
 }
 
+/* Custom bullet point (▸) before each list item */
 .info-card li::before {
   content: "▸";
   position: absolute;
@@ -269,14 +314,17 @@ main {
   color: #C8102E;
 }
 
+/* Remove bottom margin on the last list item */
 .info-card li:last-child {
   margin-bottom: 0;
 }
 
+/* Project block spacing */
 .project {
   margin-top: 4px;
 }
 
+/* Small note text styling */
 .note {
   font-size: 11px;
   color: #1e2f3f;
@@ -285,12 +333,18 @@ main {
   line-height: 1.7;
 }
 
+/* Center-align note text inside info cards */
 .info-card p.note {
   margin-top: 16px;
   text-align: center;
 }
 
-/* ---------- CONTACT ---------- */
+
+/* ==========================================
+   CONTACT SECTION SPECIFICS
+   ========================================== */
+
+/* Paragraph text in contact section */
 .contact-content p {
   font-size: 14px;
   line-height: 1.8;
@@ -305,6 +359,7 @@ main {
   font-weight: 300;
 }
 
+/* Contact action buttons */
 .contact-content a {
   display: inline-block;
   background: #0B3C5D;
@@ -322,6 +377,7 @@ main {
   letter-spacing: 1.5px;
 }
 
+/* Contact button hover state */
 .contact-content a:hover {
   background: #C8102E;
   color: #fff8e0;
@@ -330,12 +386,18 @@ main {
   transform: translateY(2px);
 }
 
+/* Contact button active/click state */
 .contact-content a:active {
   transform: translateY(6px);
   box-shadow: 0 0px 0 #1f2a3a;
 }
 
-/* ---------- FOOTER (fixed to bottom, centered) ---------- */
+
+/* ==========================================
+   FOOTER STYLES
+   ========================================== */
+
+/* Sticky/bottom footer bar */
 footer {
   background: rgba(11, 60, 93, 0.8);
   backdrop-filter: blur(6px);
@@ -350,12 +412,18 @@ footer {
   letter-spacing: 2px;
 }
 
+/* Footer text shadow */
 footer p {
   margin: 0;
   text-shadow: 2px 2px 0 #1f2a3a;
 }
 
-/* ---------- RESPONSIVE ---------- */
+
+/* ==========================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================== */
+
+/* Tablet & Mobile devices (700px width and below) */
 @media (max-width: 700px) {
   .header {
     flex-direction: column;
@@ -429,6 +497,7 @@ footer p {
   }
 }
 
+/* Small mobile devices (480px width and below) */
 @media (max-width: 480px) {
   .home-content h1 {
     font-size: 16px;
