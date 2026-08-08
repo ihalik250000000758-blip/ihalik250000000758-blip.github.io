@@ -1,90 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Isaiah Smile Burahan Halik Portfolio</title>
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isaiah Smile B. Halik — Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header class="header">
-    <a class="logo">Smile</a>
+
+<!-- ============ NAV ============ -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#home" class="logo">
+      <span class="logo-icon">&#9634;</span>SMILE
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav class="navbar" id="navbar">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#activities" class="nav-link">Activities</a>
+      <a href="/Portfolio/Skills/index.html" class="nav-link">Skills</a>
+      <a href="/Portfolio/Projects/index.html" class="nav-link">Projects</a>
+      <a href="/Portfolio/Achievements/index.html" class="nav-link">Academic&nbsp;Achievements</a>
+      <a href="/Portfolio/Experiences/index.html" class="nav-link">Experiences</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="home" id="home">
-      <div class="home-content">
-        <h1>Hi, I'm Isaiah Smile Burahan Halik</h1>
-        <p>Welcome to my personal portfolio website. I am a web developer and designer with a passion for creating beautiful and functional websites.</p>
-        <a href="https://ihalik250000000758-blip.github.io/Prelim/HTML_Activity/Fashion_Blog/FashionBlog.html">Activity 1</a>
-        <a href="https://ihalik250000000758-blip.github.io/Prelim/HTML_Activity/WineFestivalSchedule/">Activity 1.2</a>
-        <a href="https://ihalik250000000758-blip.github.io/Prelim/HTML_Activity/DaviesBurger/">Activity 2.1</a>
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-card">
+        <div class="pixel-eyebrow">NEW GAME &nbsp;›&nbsp; PLAYER PROFILE</div>
+
+        <div class="hero-grid">
+          <div class="hero-portrait">
+            <div class="portrait-frame">
+              <img src="./portfolio/pictures/mypic.jpg" alt="Isaiah Smile B. Halik profile photo" class="portrait-img">
+            </div>
+            <div class="portrait-plate">LV. 01</div>
+          </div>
+
+          <div class="hero-text">
+            <h1 class="hero-name">Isaiah Smile B. Halik</h1>
+            <p class="hero-subheading">Hi, I&rsquo;m Isaiah Smile Burahan Halik</p>
+            <p class="hero-body">Welcome to my personal portfolio website. I am a web developer and designer with a passion for creating beautiful and functional websites.</p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">View Quest Log</a>
+              <a href="#contact" class="btn btn-ghost">Send Message</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+      <div class="scroll-cue">
+        <span>PRESS SCROLL</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
 
-    <section class="about" id="about">
-      <div class="about-content">
-        <h1>About Me</h1>
+  <!-- ============ ACTIVITIES ============ -->
+  <section class="activities" id="activities">
+    <div class="section-inner">
+      <p class="section-eyebrow">QUEST BOARD</p>
+      <h2 class="section-title">Activities</h2>
+      <p class="section-lede">Side quests completed during the Preliminary term — tap a board to open the full quest.</p>
 
-        <div class="info-card">
-          <h2>Skills</h2>
+      <div class="quest-grid">
 
-          <div class="skill-group">
-            <h3>Programming &amp; Web Technologies</h3>
-            <ul>
-              <li><strong>Languages:</strong> Java, HTML, CSS</li>
-              <li><strong>Development Tools:</strong> NetBeans, Visual Studio Code</li>
-            </ul>
-          </div>
+        <a class="quest-card" href="https://ihalik250000000758-blip.github.io/Prelim/HTML_Activity/Fashion_Blog/FashionBlog.html" target="_blank" rel="noopener noreferrer">
+          <div class="quest-tag">QUEST 01</div>
+          <h3 class="quest-title">Activity 1</h3>
+          <p class="quest-desc">Fashion Blog layout &mdash; a styled article page built with semantic HTML &amp; CSS.</p>
+          <span class="quest-link">Open Quest <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
 
-          <div class="skill-group">
-            <h3>Design &amp; Multimedia</h3>
-            <ul>
-              <li><strong>Graphic &amp; Layout Tools:</strong> Canva, Adobe Illustrator, Adobe Photoshop <span class="note">(Working knowledge; comfortable with basic to intermediate design tasks)</span></li>
-            </ul>
-          </div>
-        </div>
+        <a class="quest-card" href="https://ihalik250000000758-blip.github.io/Prelim/HTML_Activity/WineFestivalSchedule/" target="_blank" rel="noopener noreferrer">
+          <div class="quest-tag">QUEST 02</div>
+          <h3 class="quest-title">Activity 1.2</h3>
+          <p class="quest-desc">Wine Festival Schedule &mdash; an event-schedule page with structured tables and typography.</p>
+          <span class="quest-link">Open Quest <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
 
-        <div class="info-card">
-          <h2>Projects</h2>
-          <div class="project">
-            <h3>Automatic Dog Feeder Using Arduino</h3>
-            <ul>
-              <li>Designed and built an automated pet feeding system using Arduino.</li>
-              <li>Programmed the device to dispense food on a scheduled basis and when motion (dog) is detected.</li>
-              <li>Integrated sensor-based logic to ensure reliable and timely food delivery.</li>
-            </ul>
-          </div>
-        </div>
+        <a class="quest-card" href="https://ihalik250000000758-blip.github.io/Prelim/HTML_Activity/DaviesBurger/" target="_blank" rel="noopener noreferrer">
+          <div class="quest-tag">QUEST 03</div>
+          <h3 class="quest-title">Activity 2.1</h3>
+          <p class="quest-desc">Davies Burger &mdash; a restaurant landing page focused on menu presentation.</p>
+          <span class="quest-link">Open Quest <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </a>
 
-        <div class="info-card">
-          <h2>Academic Achievements</h2>
-          <ul>
-            <li>Grade 11–12 – High Honor Student</li>
-            <li>Grade 10 – High Honor Student</li>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills" id="skills">
+    <!-- Creature spawner infrastructure: background-only, non-interactive.
+         Drop creature <img>/<gif> elements as .creature children of #creature-layer,
+         or push entries into window.CREATURE_ROSTER (see script.js) and let
+         initCreatureSpawner() handle placement + walking animation. -->
+    <div class="creature-layer" id="creature-layer" aria-hidden="true"></div>
+
+    <div class="section-inner">
+      <p class="section-eyebrow">TRAINER STATS</p>
+      <h2 class="section-title">Skills</h2>
+      <p class="section-lede">Proficiency levels, rated on a 5-star mastery scale.</p>
+
+      <div class="skills-columns">
+
+        <div class="skill-panel">
+          <h3 class="skill-panel-title"><i class="fa-solid fa-code"></i> Programming &amp; Web Technologies</h3>
+          <ul class="skill-list">
+            <li class="skill-row">
+              <span class="skill-name">Java</span>
+              <span class="stars" data-rating="3" aria-label="3 out of 5"></span>
+            </li>
+            <li class="skill-row">
+              <span class="skill-name">HTML</span>
+              <span class="stars" data-rating="5" aria-label="5 out of 5"></span>
+            </li>
+            <li class="skill-row">
+              <span class="skill-name">CSS</span>
+              <span class="stars" data-rating="4" aria-label="4 out of 5"></span>
+            </li>
+            <li class="skill-row">
+              <span class="skill-name">NetBeans</span>
+              <span class="stars" data-rating="3" aria-label="3 out of 5"></span>
+            </li>
+            <li class="skill-row">
+              <span class="skill-name">Visual Studio Code</span>
+              <span class="stars" data-rating="4" aria-label="4 out of 5"></span>
+            </li>
           </ul>
-          <p class="note">Consistently recognized for academic excellence throughout senior high school.</p>
+        </div>
+
+        <div class="skill-panel">
+          <h3 class="skill-panel-title"><i class="fa-solid fa-palette"></i> Design &amp; Multimedia</h3>
+          <ul class="skill-list">
+            <li class="skill-row">
+              <span class="skill-name">Canva</span>
+              <span class="stars" data-rating="4" aria-label="4 out of 5"></span>
+            </li>
+            <li class="skill-row">
+              <span class="skill-name">Adobe Illustrator</span>
+              <span class="stars" data-rating="3" aria-label="3 out of 5"></span>
+            </li>
+            <li class="skill-row">
+              <span class="skill-name">Adobe Photoshop</span>
+              <span class="stars" data-rating="3" aria-label="3 out of 5"></span>
+            </li>
+          </ul>
+          <p class="skill-note">Working knowledge — comfortable with basic to intermediate design tasks.</p>
+        </div>
+
+      </div>
+
+      <div class="section-cta">
+        <a href="/Portfolio/Skills/index.html" class="btn btn-primary">View All</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects" id="projects">
+    <div class="section-inner">
+      <p class="section-eyebrow">ITEM BOX</p>
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-feature">
+        <div class="project-image">
+          <img src="https://via.placeholder.com/560x400.png?text=Project+Photo" alt="Automatic Dog Feeder project photo placeholder">
+        </div>
+        <div class="project-info">
+          <span class="project-badge">FEATURED BUILD</span>
+          <h3 class="project-title">Automatic Dog Feeder Using Arduino</h3>
+          <ul class="project-bullets">
+            <li>Designed and built an automated pet feeding system using Arduino.</li>
+            <li>Programmed the device to dispense food on a scheduled basis and when motion (dog) is detected.</li>
+            <li>Integrated sensor-based logic to ensure reliable and timely food delivery.</li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    <section class="contact" id="contact">
-      <div class="contact-content">
-        <h1>Contact Me</h1>
-        <p>Feel free to connect with me on GitHub:</p>
-        <a href="https://github.com/ihalik250000000758-blip" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+      <div class="section-cta">
+        <a href="/Portfolio/Projects/index.html" class="btn btn-primary">View All</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <p>2026 Smile. All rights reserved.</p>
-  </footer>
+  <!-- ============ ACADEMIC ACHIEVEMENTS ============ -->
+  <section class="achievements" id="achievements">
+    <div class="section-inner">
+      <p class="section-eyebrow">TROPHY HALL</p>
+      <h2 class="section-title">Academic Achievements</h2>
+      <p class="section-lede">Consistently recognized for academic excellence throughout senior high school.</p>
+
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-trophy"></i></div>
+          <div class="timeline-image">
+            <img src="https://via.placeholder.com/120x90.png?text=Certificate" alt="Grade 11-12 certificate placeholder">
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-title">Grade 11&ndash;12: High Honor Student</h3>
+            <p class="timeline-desc">Senior High School</p>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-trophy"></i></div>
+          <div class="timeline-image">
+            <img src="https://via.placeholder.com/120x90.png?text=Certificate" alt="Grade 10 certificate placeholder">
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-title">Grade 10: High Honor Student</h3>
+            <p class="timeline-desc">Junior High School</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="section-cta">
+        <a href="/Portfolio/Achievements/index.html" class="btn btn-primary">View All</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCES ============ -->
+  <section class="experiences" id="experiences">
+    <div class="section-inner">
+      <p class="section-eyebrow">JOURNEY LOG</p>
+      <h2 class="section-title">Experiences</h2>
+
+      <ol class="timeline timeline--exp">
+        <li class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-microchip"></i></div>
+          <div class="timeline-body">
+            <div class="timeline-head">
+              <h3 class="timeline-title">Assistant Programmer &amp; STEM Researcher</h3>
+            </div>
+            <p class="timeline-org">Senior High School STEM Program</p>
+            <ul class="project-bullets">
+              <li>Co-engineered and programmed logic components for an Automated Dog Feeder system, integrating hardware components with software control.</li>
+              <li>Co-authored, formatted, and presented the accompanying technical research paper, documenting hardware architecture, empirical testing, and system reliability.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+
+      <div class="section-cta">
+        <a href="/Portfolio/Experiences/index.html" class="btn btn-primary">View All</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="section-inner contact-inner">
+      <p class="section-eyebrow">SAVE POINT</p>
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-text">Feel free to connect with me on GitHub:</p>
+      <a href="https://github.com/ihalik250000000758-blip" target="_blank" rel="noopener noreferrer" class="github-btn">
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Isaiah Smile B. Halik. All rights reserved.</p>
+</footer>
+
+<script src="/script.js"></script>
 </body>
 </html>
