@@ -55,45 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* =================================================================
-     CREATURE SPAWNER INFRASTRUCTURE (Skills section)
-     ------------------------------------------------------------
-     This section is intentionally empty of real assets. To add
-     creatures later:
-
-     1. List your assets in CREATURE_ROSTER below, e.g.
-          { src: 'assets/creatures/slime.gif', width: 40 }
-
-     2. Call initCreatureSpawner() (already wired up on load).
-
-     Each creature is appended to #creature-layer, which is
-     position:absolute across the bottom of the Skills section,
-     sits behind the content (z-index below .section-inner) and
-     has pointer-events:none — so it can never block, blur, or
-     intercept clicks/text no matter how many are added.
-  ================================================================= */
-  var CREATURE_ROSTER = [
-    // { src: 'assets/creatures/example.gif', width: 40, speed: 18 }
-  ];
-
-  function initCreatureSpawner() {
-    var layer = document.getElementById('creature-layer');
-    if (!layer || CREATURE_ROSTER.length === 0) return;
-
-    CREATURE_ROSTER.forEach(function (creature, index) {
-      var el = document.createElement('img');
-      el.src = creature.src;
-      el.className = 'creature';
-      el.alt = '';
-      el.style.width = (creature.width || 48) + 'px';
-      el.style.animationDuration = (creature.speed || 20) + 's';
-      el.style.animationDelay = (index * 3) + 's';
-      layer.appendChild(el);
-    });
-  }
-
-  initCreatureSpawner();
-
-  /* =================================================================
      ACTIVE NAV LINK ON SCROLL (nice-to-have polish)
   ================================================================= */
   var sections = document.querySelectorAll('main section[id]');
