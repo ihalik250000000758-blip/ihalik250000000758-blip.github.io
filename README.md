@@ -2,7 +2,7 @@
 
 A retro/RPG-themed personal portfolio website designed to showcase my web development journey, academic achievements, and coding projects. Built with a "Player Profile" aesthetic, this site treats my experiences and projects as quests, items, and trainer stats.
 
-🔗 **[View Live Site Here](https://ihalik250000000758-blip.github.io/)** *(Update this link to your actual GitHub Pages root URL)*
+🔗 **[View Live Site Here](https://ihalik250000000758-blip.github.io/)**
 
 ---
 
