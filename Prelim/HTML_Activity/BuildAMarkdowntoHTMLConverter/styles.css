@@ -1,0 +1,177 @@
+/* ===================================================================
+   Markdown to HTML Converter — styled to match the main portfolio's
+   pixel / parchment design system (Activity 2.2)
+=================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --parchment:    #F5E7C4;
+    --parchment-2:  #EAD6A3;
+    --ink:          #1B2B3A;
+    --ink-soft:     #2E4258;
+    --gold:         #F4B942;
+    --gold-dark:    #C98A1E;
+    --ember:        #D9613F;
+
+    --font-display: 'Press Start 2P', monospace;
+    --font-body:    'VT323', monospace;
+
+    --shadow-pixel:    4px 4px 0 var(--ink);
+    --shadow-pixel-sm: 3px 3px 0 var(--ink);
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 20px;
+    color: var(--ink);
+    background:
+        linear-gradient(180deg, rgba(30,20,12,0.55), rgba(30,20,12,0.75)),
+        repeating-linear-gradient(90deg, #8A5A34 0px, #8A5A34 38px, #7A4E2C 38px, #7A4E2C 40px),
+        linear-gradient(180deg, #6E4626 0%, #4B2E18 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ---------- Header ---------- */
+.page-header {
+    max-width: 1000px;
+    margin: 0 auto 24px;
+    background: var(--parchment);
+    border: 3px solid var(--ink);
+    box-shadow: var(--shadow-pixel);
+    padding: 24px;
+}
+
+.back-link {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.back-link:hover { color: var(--gold-dark); }
+
+.page-tag {
+    font-family: var(--font-display);
+    font-size: 0.55rem;
+    color: var(--ember);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.page-header h1 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0 0 10px;
+}
+
+.page-lede {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    margin: 0;
+}
+
+/* ---------- Converter layout ---------- */
+#container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container {
+    background: var(--parchment);
+    border: 3px solid var(--ink);
+    box-shadow: var(--shadow-pixel);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.container:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 var(--ink); }
+
+.container h2 {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    color: var(--ink);
+    margin: 0;
+}
+
+#markdown-input {
+    width: 100%;
+    height: 160px;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--ink);
+    background: var(--parchment-2);
+    border: 2px solid var(--ink);
+    padding: 10px;
+    resize: vertical;
+}
+#markdown-input:focus {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+#html-output,
+#preview {
+    height: 160px;
+    width: 100%;
+    overflow: auto;
+    border: 2px solid var(--ink);
+    padding: 10px;
+    margin: 0;
+    white-space: pre-wrap;
+    background-color: var(--parchment-2);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+}
+
+#preview img { max-width: 100%; }
+#preview blockquote {
+    margin: 6px 0;
+    padding-left: 12px;
+    border-left: 4px solid var(--gold-dark);
+    color: var(--ink-soft);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    text-align: center;
+    color: var(--parchment);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+/* ---------- Responsive (tablet / desktop) ---------- */
+@media (min-width: 700px) {
+    #markdown-input,
+    #html-output,
+    #preview {
+        height: 260px;
+    }
+
+    #container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 16px;
+    }
+
+    .container {
+        flex: 1;
+        margin: 0;
+    }
+}
