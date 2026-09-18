@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 2.2 — Build a Markdown to HTML Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="container" class="container">
+    <header class="panel hero-panel">
+      <p class="eyebrow">ACTIVITY 2.2 / QUEST 04</p>
+      <h1>Build a Markdown to HTML Converter</h1>
+      <p class="lede">Type Markdown below to generate raw HTML and a live preview.</p>
+    </header>
+
+    <section class="converter-grid" aria-label="Markdown converter workspace">
+      <article class="panel editor-panel">
+        <h2>Markdown Input</h2>
+        <label for="markdown-input" class="sr-only">Markdown Input</label>
+        <textarea id="markdown-input" spellcheck="false" aria-describedby="input-help"># Hello Adventurer
+## Pixel-style Markdown
+### Tiny heading
+> This is a blockquote.
+
+Use **bold**, *italic*, [links](https://example.com), and images:
+![Sample image](https://via.placeholder.com/420x160.png?text=Preview+Image)</textarea>
+        <p id="input-help" class="hint">Supported: headings, bold, italic, images, links, and blockquotes.</p>
+      </article>
+
+      <article class="panel output-panel">
+        <h2>Raw HTML Output</h2>
+        <pre id="html-output" aria-live="polite"></pre>
+      </article>
+    </section>
+
+    <section class="panel preview-panel">
+      <h2>HTML Preview</h2>
+      <div id="preview" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
